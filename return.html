@@ -757,8 +757,8 @@
                         <label
                           for="category"
                           class="block mb-2 text-sm font-medium text-gray-900"
-                          >Product Name</label
-                        >
+                          >Product Name 1
+                        </label>
                         <select
                           id="category"
                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
@@ -786,10 +786,56 @@
                           required=""
                         />
                       </div>
+                      <div class="flex space-x-2">
+                        <button
+                          type="button"
+                          onclick="addTextBox()"
+                          class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-2.5 py-2.5 text-center"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="23"
+                            height="23"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-plus"
+                          >
+                            <line x1="12" x2="12" y1="5" y2="19"></line>
+                            <line x1="5" x2="19" y1="12" y2="12"></line>
+                          </svg>
+                        </button>
+                        <button
+                          type="button"
+                          onclick="removeTextBox()"
+                          id="removeButton"
+                          class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-2.5 py-2.5 text-center"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-minus"
+                          >
+                            <line x1="5" x2="19" y1="12" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
                     </div>
+
+                    
                   </div>
-                  <div class="px-6 py-4 bg-gray-100 ">
-                    <div >
+                  <div class="px-6 py-4 bg-gray-100">
+                    <div>
                       <label
                         for="description"
                         class="block mb-2 text-sm font-medium text-gray-900"
