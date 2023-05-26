@@ -123,25 +123,22 @@
                 href="/dashboard.html"
                 class=" flex items-center gap-2 rounded-lg hover:bg-gray-100 hover:text-gray-700 px-4 py-2 text-white active:bg-gray-100 active:text-gray-700" aria-current="page"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-layout-dashboard"
+            >
+              <rect width="7" height="9" x="3" y="3" rx="1"></rect>
+              <rect width="7" height="5" x="14" y="3" rx="1"></rect>
+              <rect width="7" height="9" x="14" y="12" rx="1"></rect>
+              <rect width="7" height="5" x="3" y="16" rx="1"></rect>
+            </svg>
 
                 <span class="text-sm font-medium"> Dashboard </span>
               </a>
@@ -436,7 +433,7 @@
               class="bottom-0 left-0 z-20 max-w-fit bg-blue-950 shadow sm:flex sm:items-center sm:justify-between md:pt-5 md:mt-10 sm:px-8"
             >
               <span
-                class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+                class="text-sm text-gray-500 sm:text-center"
               >
                 © 2023
                 <a href="#" target="_blank" class="hover:underline">
@@ -502,7 +499,7 @@
       >
         <div class="space-y-10 overflow-auto h-min-xl">
           <div
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:pr-6 md:px-2 md:py-4"
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:px-4 md:py-4"
           >
             <img
               class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
@@ -529,7 +526,8 @@
               <button
                 id="dropdownDefaultButton"
                 data-dropdown-toggle="dropdown"
-                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                data-dropdown-offset-skidding="-10"
+                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                 type="button"
               >
                 <svg
@@ -579,7 +577,10 @@
                     </a>
                   </li>
                   <div >
-                    <a href="#" class="block px-4 py-2 bg-red-600 hover:bg-red-700 text-gray-100">
+                    <a href="#" class="block px-4 py-2 bg-red-600 hover:bg-red-700 text-gray-100"
+                    data-modal-target="deleteWarehouse"
+                    data-modal-toggle="deleteWarehouse"
+                    >
                       Delete
                     </a>
                   </div>
@@ -595,7 +596,7 @@
       >
         <div class="space-y-10 overflow-auto h-min-xl">
           <div
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:pr-6 md:px-2 md:py-4"
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:px-4 md:py-4"
           >
             <img
               class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
@@ -622,7 +623,8 @@
               <button
                 id="dropdownDefaultButton"
                 data-dropdown-toggle="dropdown"
-                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                data-dropdown-offset-skidding="-10"
+                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                 type="button"
               >
                 <svg
@@ -681,14 +683,108 @@
             </div>
           </div>
         </div>
-            </div> 
+            </div>
+            
+            <div
+        class="flex flex-col items-center justify-center py-0  sm:px-6 lg:px-8"
+      >
+        <div class="space-y-10 overflow-auto h-min-xl">
+          <div
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:px-4 md:py-4"
+          >
+            <img
+              class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+              src="https://www.novabizz.com/uploads/post/717804-1.jpg"
+              alt=""
+            />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+              <h5
+                class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
+              >
+                Warehouse 1
+              </h5>
+              <p class="mb-3 font-normal text-gray-900">
+                100/10 Bumroong Road, Tambon Pibulsongkram, Amphur Muang,
+                Bangkok, 12345
+              </p>
+              <p>Manager : Aun</p>
+              <div class="flex space-x-10">
+                <p>Email : abc@gmail.com</p>
+                <p>Tel: 080-000-0000</p>
+              </div>
+            </div>
+            <div class="grid grid-rows-4">
+              <button
+                id="dropdownDefaultButton"
+                data-dropdown-toggle="dropdown"
+                data-dropdown-offset-skidding="-10"
+                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
+                type="button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-4 h-4 mx-3"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-settings"
+                >
+                  <path
+                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                  ></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </button>
+              <!--  Dropdown menu  -->
+              <div
+                id="dropdown"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24 "
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700"
+                  aria-labelledby="dropdown"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100"
+                      data-modal-target="editWarehouse"
+                      data-modal-toggle="editWarehouse"
+                    >
+                      Edit
+                    </a>
+                  </li>
+                  <li>
+                    <a 
+                    href="#" 
+                    class="block px-4 py-2 hover:bg-gray-100"
+                    data-modal-target="manageWarehouse"
+                    data-modal-toggle="manageWarehouse" 
+                    >
+                      Manage
+                    </a>
+                  </li>
+                  <div >
+                    <a href="#" class="block px-4 py-2 bg-red-600 hover:bg-red-700 text-gray-100">
+                      Delete
+                    </a>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+            </div>
 
             <div
         class="flex flex-col items-center justify-center py-0  sm:px-6 lg:px-8"
       >
         <div class="space-y-10 overflow-auto h-min-xl">
           <div
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:pr-6 md:px-2 md:py-4"
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:px-4 md:py-4"
           >
             <img
               class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
@@ -715,7 +811,8 @@
               <button
                 id="dropdownDefaultButton"
                 data-dropdown-toggle="dropdown"
-                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
+                data-dropdown-offset-skidding="-10"
+                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center "
                 type="button"
               >
                 <svg
@@ -774,193 +871,7 @@
             </div>
           </div>
         </div>
-            </div> 
-
-            <div
-        class="flex flex-col items-center justify-center py-0sm:px-6 lg:px-8"
-      >
-        <div class="space-y-10 overflow-auto h-min-xl">
-          <div
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:pr-6 md:px-2 md:py-4"
-          >
-            <img
-              class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-              src="https://www.novabizz.com/uploads/post/717804-1.jpg"
-              alt=""
-            />
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5
-                class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
-              >
-                Warehouse 1
-              </h5>
-              <p class="mb-3 font-normal text-gray-900">
-                100/10 Bumroong Road, Tambon Pibulsongkram, Amphur Muang,
-                Bangkok, 12345
-              </p>
-              <p>Manager : Aun</p>
-              <div class="flex space-x-10">
-                <p>Email : abc@gmail.com</p>
-                <p>Tel: 080-000-0000</p>
-              </div>
             </div>
-            <div class="grid grid-rows-4">
-              <button
-                id="dropdownDefaultButton"
-                data-dropdown-toggle="dropdown"
-                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
-                type="button"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-4 h-4 mx-3"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-settings"
-                >
-                  <path
-                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
-                  ></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-              <!--  Dropdown menu  -->
-              <div
-                id="dropdown"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24 "
-              >
-                <ul
-                  class="py-2 text-sm text-gray-700"
-                  aria-labelledby="dropdown"
-                >
-                  <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100"
-                      data-modal-target="editWarehouse"
-                      data-modal-toggle="editWarehouse"
-                    >
-                      Edit
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                    href="#" 
-                    class="block px-4 py-2 hover:bg-gray-100"
-                    data-modal-target="manageWarehouse"
-                    data-modal-toggle="manageWarehouse" 
-                    >
-                      Manage
-                    </a>
-                  </li>
-                  <div >
-                    <a href="#" class="block px-4 py-2 bg-red-600 hover:bg-red-700 text-gray-100">
-                      Delete
-                    </a>
-                  </div>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-            </div> 
-
-            <div
-        class="flex flex-col items-center justify-center py-0  sm:px-6 lg:px-8"
-      >
-        <div class="space-y-10 overflow-auto h-min-xl">
-          <div
-            class="flex flex-col items-center bg-white border border-gray-200 rounded-xl shadow lg:flex-row lg:max-w-4xl md:pr-6 md:px-2 md:py-4"
-          >
-            <img
-              class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-              src="https://www.novabizz.com/uploads/post/717804-1.jpg"
-              alt=""
-            />
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5
-                class="mb-2 text-2xl font-bold tracking-tight text-gray-900"
-              >
-                Warehouse 1
-              </h5>
-              <p class="mb-3 font-normal text-gray-900">
-                100/10 Bumroong Road, Tambon Pibulsongkram, Amphur Muang,
-                Bangkok, 12345
-              </p>
-              <p>Manager : Aun</p>
-              <div class="flex space-x-10">
-                <p>Email : abc@gmail.com</p>
-                <p>Tel: 080-000-0000</p>
-              </div>
-            </div>
-            <div class="grid grid-rows-4">
-              <button
-                id="dropdownDefaultButton"
-                data-dropdown-toggle="dropdown"
-                class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center"
-                type="button"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="w-4 h-4 mx-3"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-settings"
-                >
-                  <path
-                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
-                  ></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-              <!--  Dropdown menu  -->
-              <div
-                id="dropdown"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24 "
-              >
-                <ul
-                  class="py-2 text-sm text-gray-700"
-                  aria-labelledby="dropdown"
-                >
-                  <li>
-                    <a
-                      href="#"
-                      class="block px-4 py-2 hover:bg-gray-100"
-                      data-modal-target="editWarehouse"
-                      data-modal-toggle="editWarehouse"
-                    >
-                      Edit
-                    </a>
-                  </li>
-                  <li>
-                    <a 
-                    href="#" 
-                    class="block px-4 py-2 hover:bg-gray-100"
-                    data-modal-target="manageWarehouse"
-                    data-modal-toggle="manageWarehouse" 
-                    >
-                      Manage
-                    </a>
-                  </li>
-                  <div >
-                    <a href="#" class="block px-4 py-2 bg-red-600 hover:bg-red-700 text-gray-100">
-                      Delete
-                    </a>
-                  </div>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-            </div> 
         </div>    
              
         <!--add new warehouse modal-->
@@ -975,7 +886,7 @@
             <div class="relative bg-white rounded-lg shadow">
               <!-- Modal header -->
               <div
-                class="flex items-start justify-between p-4 border-b rounded-t"
+                class="flex items-start justify-between px-6 py-4 border-b rounded-t"
               >
                 <div class="mr-3">
                   <svg
@@ -1029,7 +940,7 @@
                     <div class="flex flex-row space-x-16">
                       <label
                         for="product name"
-                        class="block mb-2 text-sm font-medium text-gray-900"
+                        class="flex items-center mb-2 text-sm font-medium text-gray-900"
                       >
                         Manager Name
                       </label>
@@ -1043,7 +954,7 @@
                     <div class="flex flex-row space-x-12">
                       <label
                         for="product name"
-                        class="block mb-2 text-sm font-medium text-gray-900"
+                        class="flex items-center mb-2 text-sm font-medium text-gray-900"
                       >
                         Warehouse Name
                       </label>
@@ -1055,8 +966,24 @@
                       />
                     </div>
                   </div>
-                  <div class="px-6 py-4 grid gap-4 mb-4 md:grid-cols-2">
+                  <div class="px-6 pt-4">
+                    <label
+                      for="address"
+                      class="block mb-2 text-sm font-medium text-gray-900"
+                    >
+                      Address
+                    </label>
+                    <input
+                      type="text"
+                      id="street_address"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="999"
+                      required
+                    />
+                  </div>
+                  <div class="px-6 py-4 grid gap-4 md:grid-cols-2">
                     <!-- <div class="mb-4 flex flex-row space-x-4">  -->
+                      
                     <div>
                       <label
                         for="street address"
@@ -1131,7 +1058,7 @@
                       <input
                         type="tel"
                         id="phone"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-2.5"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         placeholder="123-456-6789"
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         required
@@ -1147,7 +1074,7 @@
                       <input
                         type="email"
                         id="email"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-2.5"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         placeholder="example@mail.com"
                         required
                       />
@@ -1157,7 +1084,7 @@
               </div>
               <!--  Modal footer  -->
               <div
-                class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b"
+                class="flex items-center px-6 py-4 space-x-2 border-t border-gray-200 rounded-b"
               >
                 <button
                   data-modal-hide="addNewWarehouse"
@@ -1190,28 +1117,26 @@
             <div class="relative bg-white rounded-lg shadow">
               <!-- Modal header -->
               <div
-                class="flex items-start justify-between p-4 border-b rounded-t"
+                class="flex items-start justify-between py-4 px-6 border-b rounded-t"
               >
                 <div class="mr-3">
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-warehouse"
-                  >
-                    <path
-                      d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"
-                    ></path>
-                    <path d="M6 18h12"></path>
-                    <path d="M6 14h12"></path>
-                    <rect width="12" height="12" x="6" y="10"></rect>
-                  </svg>
+                  xmlns="http://www.w3.org/2000/svg"                
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-settings"
+                >
+                  <path
+                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                  ></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900">
                   Edit Warehouse
@@ -1245,7 +1170,7 @@
                     <div class="flex flex-row space-x-16">
                       <label
                         for="product name"
-                        class="block mb-2 text-sm font-medium text-gray-900"
+                        class="flex items-center mb-2 text-sm font-medium text-gray-900"
                       >
                         Manager Name
                       </label>
@@ -1260,7 +1185,7 @@
                     <div class="flex flex-row space-x-12">
                       <label
                         for="product name"
-                        class="block mb-2 text-sm font-medium text-gray-900"
+                        class="flex items-center mb-2 text-sm font-medium text-gray-900"
                       >
                         Warehouse Name
                       </label>
@@ -1273,7 +1198,22 @@
                       />
                     </div>
                   </div>
-                  <div class="px-6 py-4 grid gap-4 mb-4 md:grid-cols-2">
+                  <div class="px-6 pt-4">
+                    <label
+                      for="address"
+                      class="block mb-2 text-sm font-medium text-gray-900"
+                    >
+                      Address
+                    </label>
+                    <input
+                      type="text"
+                      id="street_address"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                      placeholder="999"
+                      required
+                    />
+                  </div>
+                  <div class="px-6 py-4 grid gap-4 md:grid-cols-2">
                     <!-- <div class="mb-4 flex flex-row space-x-4">  -->
                     <div>
                       <label
@@ -1349,7 +1289,7 @@
                       <input
                         type="tel"
                         id="phone"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-2.5"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         placeholder="123-456-6789"
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         required
@@ -1365,7 +1305,7 @@
                       <input
                         type="email"
                         id="email"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-2.5"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         placeholder="example@mail.com"
                         required
                       />
@@ -1375,7 +1315,7 @@
               </div>
               <!--  Modal footer  -->
               <div
-                class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b"
+                class="flex items-center px-6 py-4 space-x-2 border-t border-gray-200 rounded-b"
               >
                 <button
                   data-modal-hide="editWarehouse"
@@ -1412,24 +1352,22 @@
               >
                 <div class="mr-3">
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-warehouse"
-                  >
-                    <path
-                      d="M22 8.35V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.35A2 2 0 0 1 3.26 6.5l8-3.2a2 2 0 0 1 1.48 0l8 3.2A2 2 0 0 1 22 8.35Z"
-                    ></path>
-                    <path d="M6 18h12"></path>
-                    <path d="M6 14h12"></path>
-                    <rect width="12" height="12" x="6" y="10"></rect>
-                  </svg>
+                  xmlns="http://www.w3.org/2000/svg"                
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-settings"
+                >
+                  <path
+                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                  ></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
                 </div>
                 <h3 class="text-xl font-semibold text-gray-900">
                   Manage Warehouse's employee
@@ -1459,47 +1397,9 @@
               <!-- Modal body -->
               <div class="">
                 <form class="" action="Insert.php" method="post">
-                  <div class="flex items-center px-6 py-4 space-x-4">
-                    
-                    <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown" class="w-full md:w-auto flex items-center justify-center p-2.5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10  " type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd" />
-                        </svg>
-                        Choose warehouse
-                        <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path clip-rule="evenodd" fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
-                        </svg>
-                    </button>
-                    <div id="filterDropdown" class="z-10 hidden w-48 p-3 bg-white rounded-lg shadow ">
-                        <h6 class="mb-3 text-sm font-medium text-gray-900 ">Choose warehouse</h6>
-                        <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
-                            <li class="flex items-center">
-                                <input id="apple" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600  ">
-                                <label for="apple" class="ml-2 text-sm font-medium text-gray-900 ">Warehouse 1</label>
-                            </li>
-                            <li class="flex items-center">
-                                <input id="fitbit" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 ">
-                                <label for="fitbit" class="ml-2 text-sm font-medium text-gray-900 ">Warehouse 2</label>
-                            </li>
-                            <li class="flex items-center">
-                                <input id="razor" type="checkbox" value="" class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 ">
-                                <label for="razor" class="ml-2 text-sm font-medium text-gray-900 ">Warehouse 3</label>
-                            </li>
-                        </ul>
-                    </div>
-
                    
-
-                </div>
-                  <!-- <div class="px-6 py-4 grid gap-4 mb-4 md:grid-cols-2">
-                     <div class="mb-4 flex flex-row space-x-4">  
-                    
-                    
-                    
-                  </div> -->
-                
                   <div class="overflow-x-auto">
-                    <table class="w-full text-sm text-left text-gray-500 ">
+                    <table class="w-full text-sm text-center text-gray-500 ">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-100 ">
                             <tr>
                                 <th scope="col" class="px-4 py-3">Name</th>
@@ -1520,136 +1420,480 @@
                                 <td class="px-4 py-3">098-898-9898</td>
                                 <td class="px-4 py-3">Manager</td>
                                 <td class="px-4 py-3 flex items-center justify-end">
-                                    <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
+                                    <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" data-dropdown-placement="left" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
                                         <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
                                         </svg>
                                     </button>
-                                    <div id="more-employee-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow ">
-                                        <ul class="py-1 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">
+                                    <div id="more-employee-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24 text-left">
+                                        <ul class="py-2 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">                                
                                             <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 ">Show</a>
+                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100" 
+                                                data-modal-target="editEmployee"
+                                                data-modal-toggle="editEmployee"
+                                                data-modal-hide="manageWarehouse" >Edit</a>
                                             </li>
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 ">Edit</a>
-                                            </li>
+                                            <div>
+                                                <a href="#" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-gray-100 "
+                                                data-modal-target="deleteEmployee"
+                                                data-modal-toggle="deleteEmployee"
+                                                data-modal-hide="manageWarehouse">Delete</a>
+                                            </div>
                                         </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
-                                        </div>
+                                        
                                     </div>
                                 </td>
                             </tr>
                             <tr class="border-b ">
-                                <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">Aun</th>
-                                <td class="px-4 py-3">AunLNWza</td>
-                                <td class="px-4 py-3">aun@gmail.com</td>
-                                <td class="px-4 py-3">098-898-9898</td>
-                                <td class="px-4 py-3">Manager</td>
-                                <td class="px-4 py-3 flex items-center justify-end">
-                                    <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
-                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </button>
-                                    <div id="more-employee-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow ">
-                                        <ul class="py-1 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 ">Show</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 ">Edit</a>
-                                            </li>
-                                        </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
-                                        </div>
-                                    </div>
-                                </td>
+                              <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">Aun</th>
+                              <td class="px-4 py-3">AunLNWza</td>
+                              <td class="px-4 py-3">aun@gmail.com</td>
+                              <td class="px-4 py-3">098-898-9898</td>
+                              <td class="px-4 py-3">Manager</td>
+                              <td class="px-4 py-3 flex items-center justify-end">
+                                  <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" data-dropdown-placement="left" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
+                                      <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                      </svg>
+                                  </button>
+                                  <div id="more-employee-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24 ">
+                                      <ul class="py-2 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">                                
+                                          <li>
+                                              <a href="#" class="block py-2 px-4 hover:bg-gray-100" 
+                                              data-modal-target="editEmployee"
+                                              data-modal-toggle="editEmployee"
+                                              data-modal-hide="manageWarehouse" >Edit</a>
+                                          </li>
+                                          <div>
+                                              <a href="#" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-gray-100 "
+                                              data-modal-target="deleteEmployee"
+                                              data-dropdown-toggle="deleteEmployee"
+                                              data-modal-hide="manageWarehouse">Delete</a>
+                                          </div>
+                                      </ul>
+                                      
+                                  </div>
+                              </td>
                             </tr>
                             <tr class="border-b ">
-                                <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">Aun</th>
-                                <td class="px-4 py-3">AunLNWza</td>
-                                <td class="px-4 py-3">aun@gmail.com</td>
-                                <td class="px-4 py-3">098-898-9898</td>
-                                <td class="px-4 py-3">Manager</td>
-                                <td class="px-4 py-3 flex items-center justify-end">
-                                    <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
-                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </button>
-                                    <div id="more-employee-dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow ">
-                                        <ul class="py-1 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 ">Show</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 ">Edit</a>
-                                            </li>
-                                        </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 ">Delete</a>
+                            <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">Aun</th>
+                            <td class="px-4 py-3">AunLNWza</td>
+                            <td class="px-4 py-3">aun@gmail.com</td>
+                            <td class="px-4 py-3">098-898-9898</td>
+                            <td class="px-4 py-3">Manager</td>
+                            <td class="px-4 py-3 flex items-center justify-end">
+                                <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" data-dropdown-placement="left" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
+                                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                    </svg>
+                                </button>
+                                <div id="more-employee-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24 ">
+                                    <ul class="py-2 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">                                
+                                        <li>
+                                            <a href="#" class="block py-2 px-4 hover:bg-gray-100" 
+                                            data-modal-target="editEmployee"
+                                            data-modal-toggle="editEmployee"
+                                            data-modal-hide="manageWarehouse" >Edit</a>
+                                        </li>
+                                        <div>
+                                            <a href="#" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-gray-100 ">Delete</a>
                                         </div>
-                                    </div>
-                                </td>
+                                    </ul>
+                                    
+                                </div>
+                            </td>
                             </tr>
-                            <tr class="">
-                                <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">Aun</th>
-                                <td class="px-4 py-3">AunLNWza</td>
-                                <td class="px-4 py-3">aun@gmail.com</td>
-                                <td class="px-4 py-3">098-898-9898</td>
-                                <td class="px-4 py-3">Manager</td>
-                                <td class="px-4 py-3 flex items-center justify-end">
-                                    <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
-                                        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
-                                        </svg>
-                                    </button>
-                                    <div id="more-employee-dropdown" class="hidden z-10 w-44 rounded divide-y divide-gray-100 shadow ">
-                                        <ul class="py-1 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 ">Show</a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="block py-2 px-4 hover:bg-gray-100 ">Edit</a>
-                                            </li>
-                                        </ul>
-                                        <div class="py-1">
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 bg-red-600 hover:bg-red-700 ">Delete</a>
-                                        </div>
-                                    </div>
-                                </td>
+                            <tr class="border-b ">
+                              <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">Aun</th>
+                              <td class="px-4 py-3">AunLNWza</td>
+                              <td class="px-4 py-3">aun@gmail.com</td>
+                              <td class="px-4 py-3">098-898-9898</td>
+                              <td class="px-4 py-3">Manager</td>
+                              <td class="px-4 py-3 flex items-center justify-end">
+                                  <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" data-dropdown-placement="left" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
+                                      <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                      </svg>
+                                  </button>
+                                  <div id="more-employee-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24 ">
+                                      <ul class="py-2 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">                                
+                                          <li>
+                                              <a href="#" class="block py-2 px-4 hover:bg-gray-100" 
+                                              data-modal-target="editEmployee"
+                                              data-modal-toggle="editEmployee"
+                                              data-modal-hide="manageWarehouse" >Edit</a>
+                                          </li>
+                                          <div>
+                                              <a href="#" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-gray-100 ">Delete</a>
+                                          </div>
+                                      </ul>
+                                      
+                                  </div>
+                              </td>
+                            </tr>
+                            <tr class="border-b ">
+                              <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap ">Aun</th>
+                              <td class="px-4 py-3">AunLNWza</td>
+                              <td class="px-4 py-3">aun@gmail.com</td>
+                              <td class="px-4 py-3">098-898-9898</td>
+                              <td class="px-4 py-3">Manager</td>
+                              <td class="px-4 py-3 flex items-center justify-end">
+                                  <button id="more-employee-dropdown-button" data-dropdown-toggle="more-employee-dropdown" data-dropdown-placement="left" class="inline-flex items-center p-0.5 text-sm font-medium text-center text-gray-500 hover:text-gray-800 rounded-lg focus:outline-none " type="button">
+                                      <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                                      </svg>
+                                  </button>
+                                  <div id="more-employee-dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-24 ">
+                                      <ul class="py-2 text-sm text-gray-700 " aria-labelledby="more-employee-dropdown-button">                                
+                                          <li>
+                                              <a href="#" class="block py-2 px-4 hover:bg-gray-100" 
+                                              data-modal-target="editEmployee"
+                                              data-modal-toggle="editEmployee"
+                                              data-modal-hide="manageWarehouse" >Edit</a>
+                                          </li>
+                                          <div>
+                                              <a href="#" class="block py-2 px-4 text-sm bg-red-600 hover:bg-red-700 text-gray-100 ">Delete</a>
+                                          </div>
+                                      </ul>
+                                      
+                                  </div>
+                              </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
+                <nav
+                class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4"
+                aria-label="Table navigation"
+              >
+                <span class="text-sm font-normal text-gray-500">
+                  Showing
+                  <span class="font-semibold text-gray-900">1-5</span>
+                  of
+                  <span class="font-semibold text-gray-900">100</span>
+                </span>
+                <ul class="inline-flex items-stretch -space-x-px">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                    >
+                      <span class="sr-only">Previous</span>
+                      <svg
+                        class="w-5 h-5"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewbox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                      >1</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                      >2</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      aria-current="page"
+                      class="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700"
+                      >3</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                      >...</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                      >20</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                    >
+                      <span class="sr-only">Next</span>
+                      <svg
+                        class="w-5 h-5"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewbox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
                 </form>
               </div>
               <!--  Modal footer  -->
-              <!-- <div
-                class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b"
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- edit employee Modal -->
+        <div
+          id="editEmployee"
+          tabindex="-1"
+          aria-hidden="true"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        >
+          <div class="relative w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow">
+              <!-- Modal header -->
+              <div
+                class="flex items-start justify-between py-4 px-6 border-b rounded-t"
+              >
+                <div class="mr-3">
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"                
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-settings"
+                >
+                  <path
+                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                  ></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900">
+                  Edit Warehouse's Employee
+                </h3>
+                <button
+                  type="button"
+                  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                  data-modal-hide="editEmployee"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  <span class="sr-only">Close modal</span>
+                </button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="">
+                <form class="" action="Insert.php" method="post">
+                  <div class="items-center px-6 py-4 bg-gray-100 space-y-4">
+                    <div class="flex flex-row space-x-16">
+                      <label
+                        for="product name"
+                        class="flex items-center mb-2 text-sm font-medium text-gray-900"
+                      >
+                        Employee name
+                      </label>
+                      <input
+                        type="text"
+                        id="product_name"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 p-2.5"
+                        value="Aun"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="px-6 py-4 grid gap-4 md:grid-cols-2">
+                    <!-- <div class="mb-4 flex flex-row space-x-4">  -->
+                    <div>
+                      <label
+                        for="email"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                      >
+                        Account
+                      </label>
+                      <input
+                        type="text"
+                        id="account"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder=""
+                        value="AunLNWza"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="password"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                      >
+                        Password
+                      </label>
+                      <input
+                        type="password"
+                        id="password"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="**********"
+                        required
+                      />
+                      <!-- </div>  -->
+                    </div>
+                    <div>
+                      <label
+                        for="state"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                      >
+                        Role
+                      </label>
+                      <input
+                        type="text"
+                        id="state"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="Manager"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="px-6 py-4 bg-gray-100 grid gap-4 md:grid-cols-2">
+                    <div>
+                      <label
+                        for="email"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                      >
+                        Email address
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="example@mail.com"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="phone"
+                        class="block mb-2 text-sm font-medium text-gray-900"
+                      >
+                        Phone number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                        placeholder="123-456-6789"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        required
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!--  Modal footer  -->
+              <div
+                class="flex items-center px-6 py-4 space-x-2 border-t border-gray-200 rounded-b"
               >
                 <button
-                  data-modal-hide="manageWarehouse"
+                  data-modal-hide="editEmployee"
                   type="button"
                   class="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 >
                   Confirm
                 </button>
                 <button
-                  data-modal-hide="manageWarehouse"
+                  data-modal-hide="editEmployee"
                   type="button"
                   class="text-gray-500 bg-white hover:bg-gray-100 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10"
                 >
                   Cancel
                 </button>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
         
+        <!-- delete warehouse modal confirmation -->
+        <div id="deleteWarehouse" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+          <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+              <!-- Modal content -->
+              <div class="relative p-4 text-center bg-white rounded-lg shadow sm:p-5">
+                  <button type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="deleteWarehouse">
+                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                      <span class="sr-only">Close modal</span>
+                  </button>
+                  <svg class="text-gray-400 w-11 h-11 mb-3.5 mx-auto" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                  <p class="mb-4 text-gray-500 ">Are you sure you want to delete this warehouse?</p>
+                  <div class="flex justify-center items-center space-x-4">
+                      <button data-modal-toggle="deleteWarehouse" type="button" class="py-2 px-3 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-200 hover:bg-gray-100  focus:outline-none  hover:text-gray-900 focus:z-10">
+                          No, cancel
+                      </button>
+                      <button type="submit" class="py-2 px-3 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-700  focus:outline-none ">
+                          Yes, I'm sure
+                      </button>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <!-- delete employee modal confirmation -->
+        <div id="deleteEmployee" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4 w-full max-w-md h-full md:h-auto">
+            <!-- Modal content -->
+            <div class="relative p-4 text-center bg-white rounded-lg shadow sm:p-5">
+                <button type="button" class="text-gray-400 absolute top-2.5 right-2.5 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="deleteEmployee">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+                <svg class="text-gray-400 w-11 h-11 mb-3.5 mx-auto" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                <p class="mb-4 text-gray-500 ">Are you sure you want to delete this employee?</p>
+                <div class="flex justify-center items-center space-x-4">
+                    <button data-modal-toggle="deleteEmployee" type="button" class="py-2 px-3 text-sm font-medium text-gray-500 bg-white rounded-lg border border-gray-200 hover:bg-gray-100  focus:outline-none  hover:text-gray-900 focus:z-10">
+                        No, cancel
+                    </button>
+                    <button type="submit" class="py-2 px-3 text-sm font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-700  focus:outline-none ">
+                        Yes, I'm sure
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
       </main>
     </div>
   </body>
