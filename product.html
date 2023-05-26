@@ -428,9 +428,7 @@
             <footer
               class="bottom-0 left-0 z-20 max-w-fit bg-blue-950 shadow sm:flex sm:items-center sm:justify-between md:pt-5 md:mt-10 sm:px-8"
             >
-              <span
-                class="text-sm text-gray-500 sm:text-center "
-              >
+              <span class="text-sm text-gray-500 sm:text-center">
                 © 2023
                 <a href="#" target="_blank" class="hover:underline">
                   Inventory MS™
@@ -818,6 +816,14 @@
                       Electronics/PC
                     </dd>
                   </div>
+                  <div>
+                    <dt class="mb-2 font-semibold leading-none text-gray-900">
+                      Warehouse Name
+                    </dt>
+                    <dd class="mb-4 font-light text-gray-500 sm:mb-5">
+                      Warehouse 1
+                    </dd>
+                  </div>
                 </dl>
                 <div class="flex space-x-20 mt-5">
                   <div>
@@ -952,6 +958,22 @@
                     </div>
                     <div class="flex flex-row space-x-10">
                       <label
+                        for="product name"
+                        class="flex items-center mb-2 text-sm font-medium text-gray-900"
+                      >
+                        Warehouse Name
+                      </label>
+                      <select
+                        id="warehouse_name"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-2/3 p-2.5"
+                      >
+                        <option selected="">Choose warehouse</option>
+                        <option value="">Warehouse 1</option>
+                        <option value="">Warehouse 2</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-row space-x-10">
+                      <label
                         for="category"
                         class="flex items-center mb-2 text-sm font-medium text-gray-900"
                         >Product Category</label
@@ -960,8 +982,9 @@
                         id="category"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-2/3 p-2.5"
                       >
-                        <option selected="">Furniture</option>
+                        <option selected="">Choose category</option>
                         <option value="TV">Decoration stuff</option>
+                        <option value="TV">Furniture</option>
                       </select>
                     </div>
                   </div>
@@ -1255,6 +1278,21 @@
                         value="IDOLF White chair"
                         required
                       />
+                    </div>
+                    <div class="flex flex-row space-x-10">
+                      <label
+                        for="product name"
+                        class="flex items-center mb-2 text-sm font-medium text-gray-900"
+                      >
+                        Warehouse Name
+                      </label>
+                      <select
+                        id="warehouse_name"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-2/3 p-2.5"
+                      >
+                        <option selected="">Warehouse 1</option>
+                        <option value="">Warehouse 2</option>
+                      </select>
                     </div>
                     <div class="flex flex-row space-x-10">
                       <label
